@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3 text-center>Welcome to Visa Finder</h3>
+  <ion-card class="inputField">
+
+    <ion-card-header class="headr" text-center>
+      Sign In
+    </ion-card-header>
+    <ion-card-content>
+  <div class="formField" style="background-color:LightGray;">
+
+      <ion-input  type="email" placeholder="Enter your Email Id"></ion-input>
+    <br>
+
+      <ion-input type="password" placeholder="Enter Password"></ion-input>
+
+
+  </div>
+    </ion-card-content>
+  </ion-card>
+  <div class="btn">
+  <button ion-button secondary >Sign In</button><br>
+    <button ion-button secondary (click) ="navigate()" style="position:absolute;right:20%;">Sign Up</button>
+  </div>
+</ion-content>
