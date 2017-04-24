@@ -26,4 +26,18 @@ page-signup {
     height:100%;
     background-color:LightGray;
   }
+  @media (min-width:1025px)and (max-width:1281px)
+  {
+    .btn
+    {
+      position:absolute;
+      top:70%;
+      right:47%;
+    }
+    .inputField
+    {
+      width:98%;
+      height:80%;
+    }
+  }
 }

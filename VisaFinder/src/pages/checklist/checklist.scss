@@ -1,3 +1,29 @@
 page-checklist {
-
+  .btn
+  {
+    position:absolute;
+    top:80%;
+    right:20%;
+  }
+  .btn1
+  {
+    position: absolute;
+    top:70%;
+    right: 37%;
+  }
+  @media (min-width:1025px)and (max-width:1281px)
+  {
+    .btn
+    {
+      position:absolute;
+      top:80%;
+      right:43%;
+    }
+    .btn1
+    {
+      position: absolute;
+      top:70%;
+      right: 48%;
+    }
+  }
 }

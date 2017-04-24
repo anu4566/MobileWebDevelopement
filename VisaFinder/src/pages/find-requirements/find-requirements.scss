@@ -1,3 +1,41 @@
 page-find-requirements {
+  .btn
+  {
+    position:absolute;
+    top:60%;
+    right:25%;
+  }
+  .cs1
+  {
+    position:absolute;
+    right:10%;
+  }
+  .lbl
+  {
+    position: absolute;
+    left:10%;
+  }
+  .crd
+  {
+    position: absolute;
+    top:35%;
+  }
+  @media (min-width:1025px)and (max-width:1281px)
+  {
+    .lbl
+    {
+      position: absolute;
+      left:1%;
+    }
 
+    .btn
+    {
+      position:absolute;
+      top:60%;
+      right:45%;
+    }
+
+
+
+  }
 }

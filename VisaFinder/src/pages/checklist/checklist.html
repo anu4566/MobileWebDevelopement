@@ -5,14 +5,48 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title text-center>My Checklist</ion-title>
+    </ion-navbar>
 
-  <ion-navbar>
-    <ion-title>checklist</ion-title>
-  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item>
+    <ion-label>Passport</ion-label>
+    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>DS-160</ion-label>
+    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Visa Fee</ion-label>
+    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Appointment Letter</ion-label>
+    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Bank Statement</ion-label>
+    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Bonafides</ion-label>
+    <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+  <div class="btn1">
+    <button ion-button secondary >Save</button></div>
+  <div class="btn">
+
+  <button ion-button secondary >Schedule Appointment</button>
+  </div>
 
 </ion-content>

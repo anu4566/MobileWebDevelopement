@@ -6,13 +6,40 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>findRequirements</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title text-center>Find Requirements</ion-title>
+    </ion-navbar>
+
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
+  <ion-item>
+  <ion-input  type="text" placeholder="From Country"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-input  type="text" placeholder="To Country"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-input  type="text" placeholder="Citizen of"></ion-input>
+  </ion-item>
+  <ion-label class="lbl">Please select the visa that you currently hold</ion-label>
+  <ion-card class="crd">
+  <ion-item>
+    <ion-label> U.S.</ion-label>
+  <ion-checkbox color="secondary" placeholder="test" checked="false"></ion-checkbox>
+  </ion-item>
+  <ion-item >
+    <ion-label> U.K </ion-label>
+  <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+  </ion-item>
+  </ion-card>
+  <div class="btn">
+    <button ion-button secondary >Find Requirements</button>
+  </div>
 
 </ion-content>
