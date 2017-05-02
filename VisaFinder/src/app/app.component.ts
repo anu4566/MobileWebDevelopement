@@ -7,6 +7,10 @@ import { HomePage } from '../pages/home/home';
 import { Signup } from '../pages/signup/signup';
 import { FindRequirements } from '../pages/find-requirements/find-requirements';
 import { Checklist } from '../pages/checklist/checklist';
+import { Welcome } from '../pages/welcome/welcome';
+import { Auth } from '@ionic/cloud-angular';
+import { HttpModule } from '@angular/http';
+import { MyData } from '../providers/my-data';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,16 +18,15 @@ import { Checklist } from '../pages/checklist/checklist';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any ;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public auth: Auth, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
       { title: 'Find Requirements', component: FindRequirements },
       { title: 'My CheckList', component: Checklist }
     ];
@@ -36,6 +39,14 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      if(this.auth.isAuthenticated()) {
+        this.rootPage = FindRequirements;
+      } else {
+        this.rootPage = HomePage;
+      }
+
+
     });
   }
 

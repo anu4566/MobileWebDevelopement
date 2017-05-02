@@ -9,6 +9,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Signup } from '../pages/signup/signup';
 import { FindRequirements } from '../pages/find-requirements/find-requirements';
 import { Checklist } from '../pages/checklist/checklist';
+import { Welcome } from '../pages/welcome/welcome';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import { HttpModule } from '@angular/http';
+import { MyData } from '../providers/my-data';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '5ca4dcee'
+  }
+};
 
 @NgModule({
   declarations: [
@@ -16,13 +26,16 @@ import { Checklist } from '../pages/checklist/checklist';
     HomePage,
     Signup,
     FindRequirements,
-    Checklist
+    Checklist,
+    Welcome
 
 
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,11 +43,13 @@ import { Checklist } from '../pages/checklist/checklist';
     HomePage,
     Signup,
     FindRequirements,
-    Checklist
+    Checklist,
+    Welcome
 
   ],
   providers: [
     StatusBar,
+    MyData,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

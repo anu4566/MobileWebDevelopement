@@ -10,36 +10,58 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="logout()">
+          <ion-icon name="exit"></ion-icon>
+        </button>
+      </ion-buttons>
+
       <ion-title text-center>Find Requirements</ion-title>
     </ion-navbar>
 
 
 </ion-header>
 
-
+<h2>Welcome  {{ user.details.name }}</h2>
 <ion-content >
-  <ion-item>
+  <!--<ion-item>
   <ion-input  type="text" placeholder="From Country"></ion-input>
   </ion-item>
+  <ion-item>-->
   <ion-item>
-  <ion-input  type="text" placeholder="To Country"></ion-input>
+
+    <ion-select [(ngModel)]="FCountry" placeholder="From Country">
+      <ion-option value="USA" selected="true">United states of America</ion-option>
+      <ion-option value="India">India</ion-option>
+      <ion-option value="Canada">Canada</ion-option>
+    </ion-select>
   </ion-item>
+
   <ion-item>
-  <ion-input  type="text" placeholder="Citizen of"></ion-input>
+    <ion-select [(ngModel)]="TCountry" placeholder="To Country">
+      <ion-option value="USA" selected="true">United states of America</ion-option>
+      <ion-option value="India">India</ion-option>
+      <ion-option value="Canada">Canada</ion-option>
+    </ion-select>
   </ion-item>
-  <ion-label class="lbl">Please select the visa that you currently hold</ion-label>
+
+  <ion-item>
+    <ion-select [(ngModel)]="citizen" placeholder="Citizen of">
+      <ion-option value="USA" selected="true">United states of America</ion-option>
+      <ion-option value="India">India</ion-option>
+      <ion-option value="Canada">Canada</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-label class="lbl">Please select US if you hold any type of valid US visa </ion-label>
   <ion-card class="crd">
   <ion-item>
     <ion-label> U.S.</ion-label>
   <ion-checkbox color="secondary" placeholder="test" checked="false"></ion-checkbox>
   </ion-item>
-  <ion-item >
-    <ion-label> U.K </ion-label>
-  <ion-checkbox color="secondary" checked="false"></ion-checkbox>
-  </ion-item>
+
   </ion-card>
   <div class="btn">
-    <button ion-button secondary >Find Requirements</button>
+    <button ion-button secondary (click)="showChecklist()">Find Requirements</button>
   </div>
 
 </ion-content>
