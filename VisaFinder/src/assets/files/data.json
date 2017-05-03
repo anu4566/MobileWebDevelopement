@@ -1,0 +1,44 @@
+{
+  "country": {
+    "Canada": {
+      "India": [
+        "Online application form",
+        "Visa fees",
+        "Print evisa"
+      ],
+      "USA": [
+        "You don’t need a visa or an eTA. Just carry a valid passport"
+      ]
+    },
+    "India": {
+      "Canada": [
+        "The passport request letter received from IRCC",
+        "Application form",
+        "VFS Consent form",
+        "Visa fee receipt"
+      ],
+      "USA": [
+        "Valid Passport",
+        "DS-160 form barcode",
+        "Visa fee receipt",
+        "Supporting Documents as per your visa type"
+      ]
+    },
+    "USA": {
+      "Canada": [
+        "You don’t need a visa or an eTA. Just carry a valid passport "
+      ],
+      "India": [
+        "A valid passport and a photocopy of the same",
+        "India Visa Application Form plus one copy",
+        "One recent 2 x 2 passport type photograph, in color",
+        "Certificate of Incorporation",
+        "Additional Particulars Form ",
+        "Letter Of Invitation",
+        "Business Cover Letter",
+        "Proof of State Residency",
+        "Country of Origin"
+      ]
+    }
+  }
+}

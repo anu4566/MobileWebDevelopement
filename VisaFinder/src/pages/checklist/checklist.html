@@ -22,12 +22,14 @@
 
 
 <ion-content padding>
+   <form (ngSubmit)="checkForm(value)">
  <ion-list *ngFor="let item of valtorecv; let i = index;">
   <ion-item>
-    <ion-input type="text" [(ngModel)]="valtorecv[i]"></ion-input>
-    <ion-checkbox color="secondary" checked="false" ></ion-checkbox>
+    <ion-input type="text" [(ngModel)]="valtorecv[i]" [ngModelOptions]="{standalone: true}"></ion-input>
+    <ion-checkbox [(ngModel)]="checkedItems[i]" [ngModelOptions]="{standalone: true}" color="secondary"></ion-checkbox>
   </ion-item>
  </ion-list>
+
   <!--<ion-item>
     <ion-label>Passport</ion-label>
     <ion-checkbox color="secondary" checked="false"></ion-checkbox>
@@ -54,10 +56,11 @@
     <ion-checkbox color="secondary" checked="false"></ion-checkbox>
   </ion-item>-->
   <div class="btn1">
-    <button ion-button secondary >Save</button></div>
+    <button type="submit" ion-button secondary >Save</button></div>
+   </form>
   <div class="btn">
 
   <button ion-button secondary >Schedule Appointment</button>
   </div>
-
+<button ion-button secondary (click)="takeScreenShot()">Take ScreenShot</button>
 </ion-content>

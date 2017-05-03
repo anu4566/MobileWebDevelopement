@@ -11,6 +11,7 @@ import { Welcome } from '../pages/welcome/welcome';
 import { Auth } from '@ionic/cloud-angular';
 import { HttpModule } from '@angular/http';
 import { MyData } from '../providers/my-data';
+import { Screenshot } from '@ionic-native/screenshot';
 
 @Component({
   templateUrl: 'app.html'

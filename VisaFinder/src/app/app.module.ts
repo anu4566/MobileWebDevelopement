@@ -13,6 +13,9 @@ import { Welcome } from '../pages/welcome/welcome';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 import { HttpModule } from '@angular/http';
 import { MyData } from '../providers/my-data';
+import { Screenshot } from '@ionic-native/screenshot';
+import { IonicNativePlugin } from '@ionic-native/core';
+import { Printer, PrintOptions } from '@ionic-native/printer';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -50,6 +53,10 @@ const cloudSettings: CloudSettings = {
   providers: [
     StatusBar,
     MyData,
+    Screenshot,
+    Print,
+    PrintOptions,
+    IonicNativePlugin,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
